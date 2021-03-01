@@ -1,6 +1,7 @@
 <html>
   <body>
-    <div class="title"> Leap Year </div>
+    <h1 class="title"> Leap Year </h1>
+
     <?php
       echo "check!!!!"
     ?>
