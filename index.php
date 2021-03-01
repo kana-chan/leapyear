@@ -16,29 +16,13 @@
       $t = 0;                                              //何回目の閏年かを計算するための変数
       for ($y=1; $y<=1000; $y++){                          //[year]に年数、[isLeap]に閏年どうか、[times]に何回目の閏年か
         if ($y % 400 == 0) {                               //400の倍数は閏年
-          $leaps[] = [
-            "year" => $y,
-            "isLeap" => 1,
-            "times" => ++$t
-          ];
+          $leaps[] = [$y,1,++$t];
         } elseif ($y % 100 == 0) {                         //100の倍数は平年
-          $leaps[] = [
-            "year" => $y,
-            "isLeap" => 0,
-            "times" => 0
-          ];
+          $leaps[] = [$y,0,0];
         } elseif ($y % 4 == 0 ) {                          //4の倍数は閏年
-          $leaps[] = [
-            "year" => $y,
-            "isLeap" => 1,
-            "times" => ++$t
-          ];
+          $leaps[] = [$y,1,++$t];
         } else {                                           //それ以外
-          $leaps[] = [
-            "year" => $y,
-            "isLeap" => 0,
-            "times" => 0
-          ];
+          $leaps[] = [$y,0,0];
         }
       }
 
