@@ -4,6 +4,14 @@
     <button>CSV出力</button>
     <br/>
     <?php
+      function createCsv ($leaps,$name) {
+        
+      };
+
+
+
+
+
       $leaps = [];                                         //100000までをif文で閏年かどうかの判定をした上で、連想配列leapsに追加。
       $t = 0;                                              //何回目の閏年かを計算するための変数
       for ($y=1; $y<=1000; $y++){                          //[year]に年数、[isLeap]に閏年かどうか、[times]に何回目の閏年か
@@ -34,14 +42,18 @@
         }
       }
 
+
+
+
+
       // var_dump ( $leaps );
-      foreach($leaps as $l){
-        if ($l["isLeap"]) {
-          echo "${l["year"]}年は、${l["times"]}回目の閏年です <br/>";
-        } else {
-          echo "${l["times"]}.<br/>";
-        }
-      }
+      // foreach($leaps as $l){
+      //   if ($l["isLeap"]) {
+      //     echo "${l["year"]}年は、${l["times"]}回目の閏年です <br/>";
+      //   } else {
+      //     echo "${l["times"]}.<br/>";
+      //   }
+      // }
     ?>
   </body>
 </html>
