@@ -3,15 +3,16 @@
     <h1 class="title"> Leap Year </h1>
     <button>CSV出力</button>
     <?php
+    $leaps = array();
       for ($y=1; $y<=1000; $y++){
         if ($y % 400 == 0) {
-          echo "{$y}は閏年";
+          $leaps[] = array($y,true);
         } elseif ($y % 100 == 0) {
-          echo " ";
+          $lesps[] = array($y,false);
         } elseif ($y % 4 == 0 ) {
-          echo "{$y}は閏年";
+          $leaps[] = array($y,true);
         } else {
-          echo " ";
+          $lesps[] = array($y,false);
         }
       }
     ?>
